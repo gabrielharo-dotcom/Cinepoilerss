@@ -34,3 +34,19 @@
 
 ## Captura de la base de datos
 ![BASEDEDATOS](<docs/BASE DE DATOS-RONY QUINTANA.jpeg>)
+
+## OSCAR OLANO PANIORA
+## GET http://127.0.0.1:8000/api/peliculas/
+![GET](docs/GET-OSCAR_OLANO.JPG)
+
+## POST http://127.0.0.1:8000/api/peliculas/
+![POST](docs/POST-OSCAR%20OLANO%20PANIORA.jpg)
+
+## DELETE http://127.0.0.1:8000/api/peliculas/5/
+![DELETE](docs/DELETE-OSCAR%20OLANO.jpg)
+
+## PUT http://127.0.0.1:8000/api/peliculas/4/
+![PUT](docs/PUT-%20OSCAR%20OLANO.jpg)
+
+## BASE DE DATOS 
+![BASE DE DATOS](docs/base%20de%20datos-OSCAR%20OLANO.jpg)
