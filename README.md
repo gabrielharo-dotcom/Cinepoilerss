@@ -15,4 +15,18 @@
 ![BASEDEDATOS](<docs/BASE DE DATOS-GABRIEL HARO.png>)
 
 
-## Oscar Olano
+## Rony Quintana Llanque
+## Captura del GET 
+![GET](<docs/GET-RONYQUINTANA.jpeg>)
+
+## Captura del POST
+![POST](<docs/POST- RONY QUINTANApng.jpeg>)
+
+## Captura del DELETE
+![DELETE](<docs/DELETE-RONY QUINTANA.jpeg>)
+
+## Captura del PUT
+![PUT](<docs/PUT-RONY QUINTANA.jpeg>)
+
+## Captura de la base de datos
+![BASEDEDATOS](<docs/BASE DE DATOS-RONY QUINTANA.jpeg>)
