@@ -1,22 +1,38 @@
-# movies/serializers.py
 from rest_framework import serializers
-from .models import Movie, Spoiler, Genre
+from .models import Movie, Genre, Country 
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
-        # CAMBIO: Se eliminó 'description' de la tupla de campos
         fields = ('id', 'name')
 
-class SpoilerSerializer(serializers.ModelSerializer):
+class CountrySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Spoiler
-        fields = ('id', 'movie', 'content', 'created_at')
+        model = Country
+        fields = ('id', 'name')
 
 class MovieSerializer(serializers.ModelSerializer):
-    spoilers = SpoilerSerializer(many=True, read_only=True)
     genres = GenreSerializer(many=True, read_only=True)
+    country = CountrySerializer(read_only=True)
+    
+    country_id = serializers.PrimaryKeyRelatedField(
+        queryset=Country.objects.all(),
+        source='country',
+        write_only=True,
+        required=False,
+        allow_null=True,
+        label="ID del País"
+    )
 
     class Meta:
         model = Movie
-        fields = ('id', 'title', 'description', 'release_date', 'created_at', 'genres', 'spoilers')
+        fields = (
+            'id', 
+            'title', 
+            'description', 
+            'release_date', 
+            'country', 
+            'country_id', 
+            'genres', 
+            'created_at'
+        )
