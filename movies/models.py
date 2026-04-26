@@ -22,20 +22,45 @@ class Country(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Director(models.Model):
+    name = models.CharField(max_length=255)
+    bio = models.TextField(blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+    nationality = models.CharField(max_length=100, blank=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Movie(models.Model):
-    title = models.CharField(max_length=200, verbose_name="Título")
-    description = models.TextField(verbose_name="Descripción")
-    release_date = models.DateField(verbose_name="Fecha de estreno")
-    genres = models.ManyToManyField(Genre, related_name='movies', blank=True, verbose_name="Géneros")
-    country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True, blank=True, related_name='movies', verbose_name="País de origen")
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    duration = models.IntegerField()
+    release_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        verbose_name = "Película"
-        verbose_name_plural = "Películas"
-        ordering = ('-release_date',)
+    country = models.ForeignKey(
+        Country,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="movies"
+    )
+
+    director = models.ForeignKey(
+        Director,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="movies"
+    )
+
+    genres = models.ManyToManyField(Genre, blank=True, related_name="movies")
 
     def __str__(self):
         return self.title
+
+
+
