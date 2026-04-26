@@ -61,5 +61,18 @@
 ## Captura de la base de datos de géneros
 ![alt text](<docs/lab6/Captura de los Géneros/base de datos-OSCAR OLANO.jpg>)
 
+## PLATAFORMAS DE STREAMMING
+## Captura del Get http://127.0.0.1:8000/api/v1/platforms
+![get](<docs/lab6/Captura de Plataformas de Streaming/GET OSCAR OLANO PANIORA.jpg>)
 
+## Captura del Post http://127.0.0.1:8000/api/v1/platforms
+![post](<docs/lab6/Captura de Plataformas de Streaming/POST OSCAR OLANO.jpg>)
 
+## Captura del Put http://127.0.0.1:8000/api/v1/platforms/1/
+![put](<docs/lab6/Captura de Plataformas de Streaming/PUT OSCAR OLANO.jpg>)
+
+## Captura del Delete http://127.0.0.1:8000/api/v1/platforms/1/
+![dlt](<docs/lab6/Captura de Plataformas de Streaming/DELETE oscar olano.jpg>)
+
+## Captura de la base de datos de streamming
+![alt text](<docs/lab6/Captura de Plataformas de Streaming/Base de datos oscar olano.jpg>)
