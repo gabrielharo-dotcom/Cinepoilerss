@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Director, Movie, Genre, Country 
+from .models import Movie, Genre, Country, StreamingPlatform
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,47 +11,32 @@ class CountrySerializer(serializers.ModelSerializer):
         model = Country
         fields = ('id', 'name')
 
-class DirectorSerializer(serializers.ModelSerializer):
+class StreamingPlatformSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Director
-        fields = [
-            'id',
-            'name',
-            'bio',
-            'birth_date',
-            'nationality',
-            'is_active'
-        ]
-
+        model = StreamingPlatform
+        fields = ('id', 'name', 'url', 'logo_url')
 
 class MovieSerializer(serializers.ModelSerializer):
 
     genres = GenreSerializer(many=True, read_only=True)
     country = CountrySerializer(read_only=True)
-    director = DirectorSerializer(read_only=True)
+    platforms = StreamingPlatformSerializer(many=True, read_only=True)
 
     country_id = serializers.PrimaryKeyRelatedField(
         queryset=Country.objects.all(),
         source='country',
         write_only=True,
         required=False,
-        allow_null=True
+        allow_null=True,
+        label="ID del País"
     )
-
-    genre_ids = serializers.PrimaryKeyRelatedField(
-        queryset=Genre.objects.all(),
-        source='genres',
+    platform_ids = serializers.PrimaryKeyRelatedField(
+        queryset=StreamingPlatform.objects.all(),
+        source='platforms',
         many=True,
         write_only=True,
-        required=False
-    )
-
-    director_id = serializers.PrimaryKeyRelatedField(
-        queryset=Director.objects.all(),
-        source='director',
-        write_only=True,
         required=False,
-        allow_null=True
+        label="IDs de Plataformas"
     )
 
     class Meta:
@@ -64,9 +49,8 @@ class MovieSerializer(serializers.ModelSerializer):
             'country',
             'country_id',
             'genres',
-            'genre_ids',
-            'director',
-            'director_id',
+            'platforms',
+            'platform_ids',
             'created_at'
         )
 # =========================
