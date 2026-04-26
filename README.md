@@ -45,4 +45,21 @@
 
 ## OSCAR OLANO PANIORA
 
+## GÉNEROS
+## Captura del Get http://127.0.0.1:8000/api/genres/
+![get](<docs/lab6/Captura de los Géneros/GET GENERO-oscar olano paniora.jpg>)
+
+## Captura del Post http://127.0.0.1:8000/api/genres/
+![post](<docs/lab6/Captura de los Géneros/POST GENEROS- oscar olano paniora.jpg>)
+
+## Captura del Put http://127.0.0.1:8000/api/genres/1/
+![put](<docs/lab6/Captura de los Géneros/PUT GENERO-oscar olano .jpg>)
+
+## Captura del Delete http://127.0.0.1:8000/api/genres/1/
+![dlt](<docs/lab6/Captura de los Géneros/DELETE GENERO-oscar olano paniora.jpg>)
+
+## Captura de la base de datos de géneros
+![alt text](<docs/lab6/Captura de los Géneros/base de datos-OSCAR OLANO.jpg>)
+
+
 
