@@ -76,7 +76,7 @@
 ![db](<docs/lab6/Carpetas de los directores/BD-RONY QUINTANA.png   >)
 
 ## Captura de Movie List
-![alt text](<docs/lab6/MovieList-Rony Quintana.png>)
+![alt text](<docs/lab6/Carpetas de los directores/GET-API-RONY QUINTANA.png>)
 
 ## Capturas de Admin
 ![country](<docs/lab6/ADMIN-RONY QUINTANA.png>)
